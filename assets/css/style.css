@@ -1,0 +1,26 @@
+.col{
+    margin-top: 20px;
+}
+.card-title{
+    font-weight: bold;
+}
+@media only screen and (max-width: 600px) {
+    nav > div > *{
+        text-align: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .card{
+        width: 10.75rem !important;
+    }
+     .card > div{
+        margin: 0px !important;
+        padding: 5px;
+    }
+
+    /*.card img{
+     position: absolute; 
+        z-index: 1;
+        
+    } */
+  }
