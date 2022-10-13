@@ -7,15 +7,17 @@ let getFilm = async() =>{
     let data = result.results
     console.log(data)
 
-    data.slice(0,16).forEach(item => {
+    data.slice(0,18).forEach(item => {
         filmList.innerHTML +=
         `<div class="col">
         <div class="card" style="width: 19rem;">
             <img src="https://image.tmdb.org/t/p/w500/${item.poster_path}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-title">${item.original_title}</h5>
+            <div class="d-flex justify-content-between">
+            <p class="card-title">${item.original_title}</p>
+            <p class="card-title">${item.vote_average}</p>
+        </div>
                 <p class="card-text">
-                    <span class="text-warning" style="display:block;font-weight:bold;"><i class="fa-solid fa-star"></i> ${item.vote_average}</span>
                     ${item.release_date}
                 </p>
             </div>
@@ -36,15 +38,17 @@ document.querySelector("form").addEventListener('submit', async (event) => {
                 e.remove()
             })
 
-            data.slice(0,16).forEach(item => {
+            data.slice(0,18).forEach(item => {
                 filmList.innerHTML += 
                 `<div class="col">
                     <div class="card" style="width: 19rem;">
                         <img src="https://image.tmdb.org/t/p/w500/${item.poster_path}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-title">${item.original_title}</h5>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-title">${item.original_title}</p>
+                            <p class="card-title">${item.vote_average}</p>
+                        </div>
                             <p class="card-text">
-                                <span class="text-warning" style="display:block;font-weight:bold;"><i class="fa-solid fa-star"></i> ${item.vote_average}</span>
                                 ${item.release_date}
                             </p>
                         </div>
