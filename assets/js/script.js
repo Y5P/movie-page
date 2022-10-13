@@ -15,7 +15,7 @@ let getFilm = async() =>{
             <div class="card-body">
             <div class="d-flex justify-content-between">
             <p class="card-title">${item.original_title}</p>
-            <p class="card-title">${item.vote_average}</p>
+            <p class="card-rate">${item.vote_average}</p>
         </div>
                 <p class="card-text">
                     ${item.release_date}
@@ -46,7 +46,7 @@ document.querySelector("form").addEventListener('submit', async (event) => {
                         <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <p class="card-title">${item.original_title}</p>
-                            <p class="card-title">${item.vote_average}</p>
+                            <p class="card-rate">${item.vote_average}</p>
                         </div>
                             <p class="card-text">
                                 ${item.release_date}
